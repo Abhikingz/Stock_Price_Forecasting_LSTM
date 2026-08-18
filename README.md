@@ -2,11 +2,11 @@
 
 A time series forecasting engine engineered for NSE and BSE equity market historical data. The application utilizes a Long Short Term Memory network augmented with a Bahdanau attention mechanism to highlight critical historical price sequences over a 60 day window.
 
-## Dataset & Resources
+## Project Documentation & Technical Report
 
-* **Primary Data Source**: [Yahoo Finance NSE/BSE Historical Equities](https://finance.yahoo.com/) via `yfinance` API
-* **Local Cached Data**: Included in `data/nifty50_stock_data.csv` (1,250 daily OHLCV trading bars)
-* **Benchmark Result**: 2.3% Root Mean Square Error on NIFTY 50 equities
+* **Download Technical PDF Report**: [Technical_Report_Stock_Price_Forecasting_LSTM.pdf](Technical_Report_Stock_Price_Forecasting_LSTM.pdf)
+* **Primary Data Source**: [Yahoo Finance NSE/BSE Historical Equities](https://finance.yahoo.com/)
+* **Local Cached Data**: Included in `data/nifty50_stock_data.csv`
 
 ## Key Highlights
 
@@ -15,27 +15,9 @@ A time series forecasting engine engineered for NSE and BSE equity market histor
 * Outperforms vanilla LSTM baseline by 18% on held out test sets
 * Interactive Streamlit dashboard for equity lookup and forward trend visualization
 
-## Project Structure
+## Quickstart Guide
 
-```
-Stock_Price_Forecasting_LSTM/
-├── app.py           # Streamlit dashboard interface
-├── model.py         # LSTM Attention architecture implementation
-├── data_loader.py   # OHLCV data pipeline and MinMax scaling
-├── data/
-│   └── nifty50_stock_data.csv # OHLCV equity historical data
-├── requirements.txt # Project dependencies
-└── README.md        # Technical project overview
-```
-
-## Running the Application
-
-### 1. Install Requirements
 ```bash
 pip install -r requirements.txt
-```
-
-### 2. Launch Streamlit Web App
-```bash
 streamlit run app.py
 ```
