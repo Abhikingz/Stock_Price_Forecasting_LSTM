@@ -5,9 +5,9 @@ import plotly.graph_objects as go
 from data_loader import fetch_stock_data, preprocess_sequences
 from model import LSTMAttentionForecaster
 
-st.set_page_config(page_title="Stock Price Forecasting: LSTM & Attention", page_icon="📈", layout="wide")
+st.set_page_config(page_title="Stock Price Forecasting: LSTM & Attention", page_icon="", layout="wide")
 
-st.title("📈 Stock Price Forecasting with Bahdanau Attention LSTM")
+st.title(" Stock Price Forecasting with Bahdanau Attention LSTM")
 st.write("Ingesting historical OHLCV data for NSE and BSE equities with a 60 day sequence window.")
 
 col1, col2 = st.columns([1, 3])
